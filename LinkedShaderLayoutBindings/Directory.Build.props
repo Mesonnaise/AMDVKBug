@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="CreateCommonOutputSubdirectory" AfterTargets="Build">
+    <MakeDir Directories="$(OutDir)MyCommonSubdirectory" />
+  </Target>
+</Project>
