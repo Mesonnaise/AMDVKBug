@@ -7,7 +7,7 @@ This repository documents a series of driver-level issues discovered in the AMD 
 The kernel space driver (amdkmdag.sys) does not validate the the addresses used in descriptor buffers before the buffer is copied to hardware resulting in a recoverable crash of the driver. 
 Shows a single example of the issue, other access violations can also happen when an invalid descriptor address is bound to the command buffer via `vkCmdBindDescriptorBuffersExt` or no descriptor buffer is bound at all. 
 
-### VertexBinding.cpp
+### VertexBinding.cpp (This bug was fixed in Adrenalin Edition Version 26.1.1)
 
 When using dynamic rendering state in a Vulkan command buffer, a memory access violation can occur in kernel space if a vertex buffer is not bound to the command buffer via the vkCmdBindVertexBuffers2
 
